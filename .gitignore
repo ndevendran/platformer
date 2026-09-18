@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+
+# Build output
+Debug/
+Release/
+x64/
+Win32/
+
+# Compiled/intermediate files
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.tlog
+*.lastbuildstate
+
+# User-specific Visual Studio settings
+*.user
+*.suo
+
+# Project archives
+*.zip
