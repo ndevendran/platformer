@@ -60,6 +60,7 @@ private:
 
 	// Game-specific
 	class Sheep* mSheep; // Player's sheep
+	class Alien* mAlien; // Enemy alien
 
 	Uint32 speed = 100; // milliseconds per frame
 };

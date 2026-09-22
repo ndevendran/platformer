@@ -26,6 +26,9 @@
   <ItemGroup>
     <ClCompile Include="Actors\Actor.cpp" />
     <ClCompile Include="Actors\Sheep.cpp" />
+    <ClCompile Include="AIPatrol.cpp" />
+    <ClCompile Include="Alien.cpp" />
+    <ClCompile Include="Components\AIComponent.cpp" />
     <ClCompile Include="Components\Component.cpp" />
     <ClCompile Include="Components\MoveComponent.cpp" />
     <ClCompile Include="Components\AnimSpriteComponent.cpp" />
@@ -45,9 +48,13 @@
     <ClInclude Include="Actors\Actor.h" />
     <ClInclude Include="Actors\ActorState.h" />
     <ClInclude Include="Actors\Sheep.h" />
+    <ClInclude Include="AIPatrol.h" />
+    <ClInclude Include="Alien.h" />
+    <ClInclude Include="Components\AIComponent.h" />
     <ClInclude Include="Components\Component.h" />
     <ClInclude Include="Components\MoveComponent.h" />
     <ClInclude Include="Components\AnimSpriteComponent.h" />
+    <ClInclude Include="Engine\AIState.h" />
     <ClInclude Include="Engine\Game.h" />
     <ClInclude Include="Engine\MyMath.h" />
     <ClInclude Include="Floor.h" />

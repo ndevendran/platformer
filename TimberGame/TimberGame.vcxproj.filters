@@ -72,6 +72,15 @@
     <ClCompile Include="Floor.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
+    <ClCompile Include="Components\AIComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AIPatrol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Alien.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -111,6 +120,18 @@
       <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="Floor.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\AIComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\AIState.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="AIPatrol.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Alien.h">
       <Filter>Actors</Filter>
     </ClInclude>
   </ItemGroup>

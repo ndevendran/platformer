@@ -14,6 +14,7 @@
 #include "Sheep.h"
 #include "Collidable.h"
 #include "Floor.h"
+#include "Alien.h"
 
 Game::Game()
 	:mWindow(nullptr)
@@ -143,6 +144,7 @@ void Game::GenerateOutput()
 void Game::LoadData()
 {
 	mSheep = new Sheep(50, 400, this);
+	mAlien = new Alien(450, 400, this);
 
 	for (int i = 0; i < 20; i++)
 	{
