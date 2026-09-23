@@ -67,45 +67,6 @@ void Sheep::UpdateActor(float deltaTime)
 			float overlapY = halfHeight - std::abs(diff.y);
 			Vector2 collidableCenter = otherSquare->GetCenter();
 			Vector2 sheepCenter = mSquare->GetCenter();
-			
-			
-			//std::ofstream logFile("collision_log.txt", std::ios::app);
-
-			//if (logFile.is_open())
-			//{
-			//	logFile << "Actor Position: "
-			//		<< GetPosition().x << ", "
-			//		<< GetPosition().y << '\n';
-
-			//	logFile << "Sheep Center: "
-			//		<< sheepCenter.x << ", "
-			//		<< sheepCenter.y << '\n';
-
-			//	logFile << "Sheep Size: "
-			//		<< mSquare->GetWidth() << " x "
-			//		<< mSquare->GetHeight() << '\n';
-
-			//	logFile << "Other Center: "
-			//		<< collidableCenter.x << ", "
-			//		<< collidableCenter.y << '\n';
-
-			//	logFile << "Other Size: "
-			//		<< otherSquare->GetWidth() << " x "
-			//		<< otherSquare->GetHeight() << '\n';
-
-			//	logFile << "Diff: "
-			//		<< diff.x << ", "
-			//		<< diff.y << '\n';
-
-			//	logFile << "Overlap: "
-			//		<< overlapX << ", "
-			//		<< overlapY << '\n';
-
-			//	logFile << "Upward Speed: "
-			//		<< sheepMove->GetUpwardSpeed() << '\n';
-
-			//	logFile << "============================\n";
-			//}
 
 
 			//Horizontal collision happens when horizontal distance between centers is less than

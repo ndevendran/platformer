@@ -14,5 +14,6 @@ public:
 
 protected:
 	AnimSpriteComponent* alienSprite;
-	AIComponent* alienMove;
+	AIComponent* alienAI;
+	MoveComponent* alienMove;
 };

@@ -136,6 +136,7 @@ void Game::GenerateOutput()
 	}
 
 	mSheep->GetSquare()->DrawDebug(mRenderer);
+	//mAlien->GetSquare()->DrawDebug(mRenderer);
 	
 
 	SDL_RenderPresent(mRenderer);
