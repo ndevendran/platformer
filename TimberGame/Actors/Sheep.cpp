@@ -7,7 +7,7 @@ Sheep::Sheep(float x, float y, Game* game)
 	:Actor(x, y, game)
 	,mSquare(nullptr)
 {
-	sheepSprite = new AnimSpriteComponent(this, 42, 42, 6);
+	sheepSprite = new AnimatedSpriteComponent(this, 42, 42, 6);
 	sheepSprite->SetTexture(WALKING, 42, 42, 6, game->GetTexture("assets/SheepWalk.png"));
 	sheepSprite->SetTexture(IDLE, 42, 42, 4, game->GetTexture("assets/SheepIdle.png"));
 	sheepSprite->SetTexture(JUMPING, 42, 42, 8, game->GetTexture("assets/SheepJump.png"));

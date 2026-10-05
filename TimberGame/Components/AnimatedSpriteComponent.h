@@ -2,18 +2,18 @@
 #include <SDL3/SDL.h>
 #include "Actor.h"
 #include "Component.h"
-#include "ActorState.h"
+#include "ActorStateType.h"
 #include "Sprite.h"
 #include "SpriteComponent.h"
 
-class AnimSpriteComponent : public SpriteComponent
+class AnimatedSpriteComponent : public SpriteComponent
 {
 public:
-	AnimSpriteComponent(Actor* owner, int frameWidth, int frameHeight, int frameCount, int drawOrder = 100);
-	~AnimSpriteComponent();
+	AnimatedSpriteComponent(Actor* owner, int frameWidth, int frameHeight, int frameCount, int drawOrder = 100);
+	~AnimatedSpriteComponent();
 	
 	virtual void Draw(SDL_Renderer* renderer);
-	virtual void SetTexture(ActorState state, int frameWidth, int frameHeight, int frameCount, SDL_Texture* texture);
+	virtual void SetTexture(ActorStateType state, int frameWidth, int frameHeight, int frameCount, SDL_Texture* texture);
 	
 
 	int GetFrameHeight() const { return frameHeight; }
@@ -33,7 +33,7 @@ public:
 
 	}
 
-	void SetFrameDuration(ActorState state, Uint64 duration) {
+	void SetFrameDuration(ActorStateType state, Uint64 duration) {
 		mFrameDurations[state] = duration;
 	}
 
@@ -45,14 +45,32 @@ public:
 		return frameHeight * mScale;
 	}
 
+	float GetFrameStart() {
+		return frameStart;
+	}
+
+	float SetFrameStart(float start) {
+		frameStart = start;
+	}
+
+	int GetFrame() const {
+		return mFrame;
+	}
+
+	void SetFrame(int frame) {
+		mFrame = frame;
+	}
+
 protected:
 	// Change to a dictionary of textures for different states
-	std::unordered_map<ActorState, Sprite> mTextures;
-	std::unordered_map<ActorState, Uint64> mFrameDurations;
+	std::unordered_map<ActorStateType, Sprite> mTextures;
+	std::unordered_map<ActorStateType, Uint64> mFrameDurations;
 
 	int frameWidth;
 	int frameHeight;
 	int frameCount;
 	int drawOrder;
+	float frameStart;
+	int mFrame;
 	Actor* owner;
 };

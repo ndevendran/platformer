@@ -1,5 +1,7 @@
 #pragma once
-enum ActorState {
+#include "Actor.h"
+
+enum ActorStateType {
 	WALKING,
 	JUMPING,
 	ATTACKING,

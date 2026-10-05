@@ -5,7 +5,7 @@
 Alien::Alien(float x, float y, Game* game)
 	:Collidable(x, y, game)
 {
-	alienSprite = new AnimSpriteComponent(this, 42, 42, 6);
+	alienSprite = new AnimatedSpriteComponent(this, 42, 42, 6);
 	alienSprite->SetTexture(WALKING, 42, 42, 6, game->GetTexture("assets/AlienWalk.png"));
 	alienSprite->SetFrameDuration(WALKING, 120);
 

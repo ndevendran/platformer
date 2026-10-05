@@ -1,6 +1,6 @@
 #pragma once
 #include "Actor.h"
-#include "AnimSpriteComponent.h"
+#include "AnimatedSpriteComponent.h"
 #include "MoveComponent.h"
 #include "Game.h"
 #include "InputComponent.h"
@@ -20,7 +20,7 @@ protected:
 	const float Gravity = 1500.0f; // Gravity constant
 	const float JUMP_SPEED = -500.0f; // Jump speed constant
 	const float FLOOR = 400.0f; // Floor position
-	AnimSpriteComponent* sheepSprite;
+	AnimatedSpriteComponent* sheepSprite;
 	SquareComponent* mSquare;
 	InputComponent* sheepMove;
 };

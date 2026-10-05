@@ -12,4 +12,5 @@ private:
 	int mForwardKey;
 	int mBackwardKey;
 	int mJumpKey;
+	int mAttackKey;
 };

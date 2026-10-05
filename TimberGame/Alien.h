@@ -1,6 +1,6 @@
 #pragma once
 #include "Collidable.h"
-#include "AnimSpriteComponent.h"
+#include "AnimatedSpriteComponent.h"
 #include "MoveComponent.h"
 #include "Game.h"
 #include "AIComponent.h"
@@ -13,7 +13,7 @@ public:
 	void UpdateActor(float deltaTime) override;
 
 protected:
-	AnimSpriteComponent* alienSprite;
+	AnimatedSpriteComponent* alienSprite;
 	AIComponent* alienAI;
 	MoveComponent* alienMove;
 };

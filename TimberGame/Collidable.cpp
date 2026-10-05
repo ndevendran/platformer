@@ -1,5 +1,5 @@
 #include "Collidable.h"
-#include "AnimSpriteComponent.h"
+#include "AnimatedSpriteComponent.h"
 #include "SquareComponent.h"
 
 Collidable::Collidable(float x, float y, Game* game)

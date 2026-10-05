@@ -2,7 +2,7 @@
 #include <SDL3/SDL.h>
 #include <vector>
 #include "Game.h"
-#include "ActorState.h"
+#include "ActorStateType.h"
 #include "MyMath.h"
 
 class Actor
@@ -24,8 +24,8 @@ public:
 	bool isFacingRight() const { return facingRight; }
 	void setFacingRight(bool right) { facingRight = right; }
 
-	ActorState getActorState() const { return state; }
-	void setActorState(ActorState newState) { state = newState; }
+	ActorStateType getActorState() const { return state; }
+	void setActorState(ActorStateType newState) { state = newState; }
 
 	virtual void UpdateActor(float deltaTime);
 	void UpdateComponents(float deltaTime);
@@ -43,7 +43,7 @@ protected:
 	float posX;
 	float posY;
 	Vector2 mPosition;
-	enum ActorState state;
+	ActorStateType state;
 	bool isActive;
 	bool walking = false;
 	bool facingRight = true;

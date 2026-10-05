@@ -10,5 +10,5 @@ public:
 	class SquareComponent* GetSquare() { return mSquare; }
 private:
 	class SquareComponent* mSquare;
-	class AnimSpriteComponent* alienSprite;
+	class AnimatedSpriteComponent* alienSprite;
 };

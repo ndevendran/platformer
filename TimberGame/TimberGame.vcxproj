@@ -28,40 +28,49 @@
     <ClCompile Include="Actors\Sheep.cpp" />
     <ClCompile Include="AIPatrol.cpp" />
     <ClCompile Include="Alien.cpp" />
+    <ClCompile Include="AttackState.cpp" />
     <ClCompile Include="Components\AIComponent.cpp" />
     <ClCompile Include="Components\Component.cpp" />
     <ClCompile Include="Components\MoveComponent.cpp" />
-    <ClCompile Include="Components\AnimSpriteComponent.cpp" />
+    <ClCompile Include="Components\AnimatedSpriteComponent.cpp" />
     <ClCompile Include="COMPONENTS\SpriteComponenet.cpp" />
     <ClCompile Include="Engine\Game.cpp" />
     <ClCompile Include="Engine\MyMath.cpp" />
     <ClCompile Include="Floor.cpp" />
+    <ClCompile Include="IdleState.cpp" />
     <ClCompile Include="InputComponent.cpp" />
+    <ClCompile Include="JumpState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Collidable.cpp" />
     <ClCompile Include="Collidable.h" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="SquareComponent.cpp" />
     <ClCompile Include="SquareComponent.h" />
+    <ClCompile Include="WalkingState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actors\Actor.h" />
-    <ClInclude Include="Actors\ActorState.h" />
+    <ClInclude Include="Actors\ActorStateType.h" />
     <ClInclude Include="Actors\Sheep.h" />
     <ClInclude Include="AIPatrol.h" />
     <ClInclude Include="Alien.h" />
+    <ClInclude Include="AnimationState.h" />
+    <ClInclude Include="AttackState.h" />
     <ClInclude Include="Components\AIComponent.h" />
     <ClInclude Include="Components\Component.h" />
     <ClInclude Include="Components\MoveComponent.h" />
-    <ClInclude Include="Components\AnimSpriteComponent.h" />
+    <ClInclude Include="Components\AnimatedSpriteComponent.h" />
     <ClInclude Include="Engine\AIState.h" />
     <ClInclude Include="Engine\Game.h" />
     <ClInclude Include="Engine\MyMath.h" />
     <ClInclude Include="Floor.h" />
+    <ClInclude Include="IdleState.h" />
     <ClInclude Include="InputComponent.h" />
+    <ClInclude Include="JumpState.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteComponent.h" />
+    <ClInclude Include="WalkingState.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TimberGame.rc" />

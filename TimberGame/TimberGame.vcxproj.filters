@@ -33,7 +33,7 @@
     <ClCompile Include="Components\MoveComponent.cpp">
       <Filter>Components</Filter>
     </ClCompile>
-    <ClCompile Include="Components\AnimSpriteComponent.cpp">
+    <ClCompile Include="Components\AnimatedSpriteComponent.cpp">
       <Filter>Components</Filter>
     </ClCompile>
     <ClCompile Include="Actors\Actor.cpp">
@@ -81,6 +81,18 @@
     <ClCompile Include="Alien.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IdleState.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkingState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -92,13 +104,13 @@
     <ClInclude Include="Components\MoveComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
-    <ClInclude Include="Components\AnimSpriteComponent.h">
+    <ClInclude Include="Components\AnimatedSpriteComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="Actors\Actor.h">
       <Filter>Actors</Filter>
     </ClInclude>
-    <ClInclude Include="Actors\ActorState.h">
+    <ClInclude Include="Actors\ActorStateType.h">
       <Filter>Actors</Filter>
     </ClInclude>
     <ClInclude Include="Actors\Sheep.h">
@@ -133,6 +145,21 @@
     </ClInclude>
     <ClInclude Include="Alien.h">
       <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationState.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="IdleState.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="WalkingState.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpState.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackState.h">
+      <Filter>Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

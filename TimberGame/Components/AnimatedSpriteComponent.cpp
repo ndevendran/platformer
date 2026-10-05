@@ -1,7 +1,7 @@
-#include "AnimSpriteComponent.h"
+#include "AnimatedSpriteComponent.h"
 #include "Actor.h"
 
-AnimSpriteComponent::AnimSpriteComponent(Actor* owner, int frameWidth, int frameHeight, int frameCount, int drawOrder)
+AnimatedSpriteComponent::AnimatedSpriteComponent(Actor* owner, int frameWidth, int frameHeight, int frameCount, int drawOrder)
 	:SpriteComponent(owner, drawOrder)
 	, frameWidth(frameWidth)
 	, frameHeight(frameHeight)
@@ -11,11 +11,11 @@ AnimSpriteComponent::AnimSpriteComponent(Actor* owner, int frameWidth, int frame
 	mOwner->getGame()->AddSprite(this);
 }
 
-AnimSpriteComponent::~AnimSpriteComponent()
+AnimatedSpriteComponent::~AnimatedSpriteComponent()
 {
 }
 
-void AnimSpriteComponent::Draw(SDL_Renderer* renderer) {
+void AnimatedSpriteComponent::Draw(SDL_Renderer* renderer) {
 	// This function would contain the logic to draw the sprite using the texture and frame information.
 	// It would typically involve setting up the source rectangle based on the current frame and rendering it to the screen.
 	int frame = 0;
@@ -69,12 +69,12 @@ void AnimSpriteComponent::Draw(SDL_Renderer* renderer) {
 	}
 }
 
-void AnimSpriteComponent::SetTexture(ActorState state, int frameWidth, int frameHeight, int frameCount, SDL_Texture* texture)
+void AnimatedSpriteComponent::SetTexture(ActorStateType state, int frameWidth, int frameHeight, int frameCount, SDL_Texture* texture)
 {
 	mTextures[state] = Sprite(frameWidth, frameHeight, frameCount, texture);
 }
 
-int AnimSpriteComponent::GetCurrentFrame(Uint32 speed)
+int AnimatedSpriteComponent::GetCurrentFrame(Uint32 speed)
 {
 	Sprite& currentSprite = mTextures[mOwner->getActorState()];
 	frameCount = currentSprite.getFrameCount();
