@@ -4,8 +4,8 @@
 class AnimationState
 {
 public:
-    AnimationState(AnimatedSpriteComponent* owner)
-        : mOwner(owner),
+    AnimationState(class AnimatedSpriteComponent* owner)
+        :mOwner(owner),
         frameStart(0.0f)
     {
     }
@@ -18,6 +18,6 @@ public:
     virtual ActorStateType GetName() const = 0;
 
 protected:
-    AnimatedSpriteComponent* mOwner;
+    class AnimatedSpriteComponent* mOwner;
     Uint64 frameStart;
 };

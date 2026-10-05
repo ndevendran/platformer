@@ -24,6 +24,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ActorStateType.cpp" />
     <ClCompile Include="Actors\Actor.cpp" />
     <ClCompile Include="Actors\Sheep.cpp" />
     <ClCompile Include="AIPatrol.cpp" />

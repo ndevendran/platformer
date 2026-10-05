@@ -5,6 +5,7 @@
 #include "ActorStateType.h"
 #include "Sprite.h"
 #include "SpriteComponent.h"
+#include "AnimationState.h"
 
 class AnimatedSpriteComponent : public SpriteComponent
 {
@@ -61,6 +62,11 @@ public:
 		mFrame = frame;
 	}
 
+	void Update(float deltaTime) override;
+	void ChangeState(const ActorStateType name);
+
+	void RegisterState(class AnimationState* state);
+
 protected:
 	// Change to a dictionary of textures for different states
 	std::unordered_map<ActorStateType, Sprite> mTextures;
@@ -73,4 +79,7 @@ protected:
 	float frameStart;
 	int mFrame;
 	Actor* owner;
+private:
+	std::unordered_map<ActorStateType, class AnimationState*> mStateMap;
+	class AnimationState* mCurrentState;
 };

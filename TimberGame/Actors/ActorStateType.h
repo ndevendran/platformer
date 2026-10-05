@@ -1,5 +1,5 @@
 #pragma once
-#include "Actor.h"
+#include <string>
 
 enum ActorStateType {
 	WALKING,
@@ -8,3 +8,5 @@ enum ActorStateType {
 	DEAD,
 	IDLE
 };
+
+std::string ActorStateToString(ActorStateType state);

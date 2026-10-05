@@ -81,3 +81,35 @@ int AnimatedSpriteComponent::GetCurrentFrame(Uint32 speed)
 	
 	return (SDL_GetTicks() / speed) % frameCount;
 }
+
+void AnimatedSpriteComponent::Update(float deltaTime)
+{
+	if (mCurrentState) {
+		if (mCurrentState->GetName() != mOwner->getActorState()) {
+			ChangeState(mOwner->getActorState());
+		}
+
+		mCurrentState->Update(deltaTime);
+	}
+}
+
+void AnimatedSpriteComponent::ChangeState(const ActorStateType name)
+{
+	if (mCurrentState) {
+		mCurrentState->OnExit();
+	}
+	auto iter = mStateMap.find(name);
+	if (iter != mStateMap.end()) {
+		mCurrentState = iter->second;
+		mCurrentState->OnEnter();
+	}
+	else {
+		SDL_Log("Could not find current state %s in state map", ActorStateToString(name));
+		mCurrentState = nullptr;
+	}
+}
+
+void AnimatedSpriteComponent::RegisterState(AnimationState* state)
+{
+	mStateMap.emplace(state->GetName(), state);
+}
