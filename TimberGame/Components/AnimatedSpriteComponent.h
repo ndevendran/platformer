@@ -46,14 +46,6 @@ public:
 		return frameHeight * mScale;
 	}
 
-	float GetFrameStart() {
-		return frameStart;
-	}
-
-	float SetFrameStart(float start) {
-		frameStart = start;
-	}
-
 	int GetFrame() const {
 		return mFrame;
 	}
@@ -76,9 +68,7 @@ protected:
 	int frameHeight;
 	int frameCount;
 	int drawOrder;
-	float frameStart;
 	int mFrame;
-	Actor* owner;
 private:
 	std::unordered_map<ActorStateType, class AnimationState*> mStateMap;
 	class AnimationState* mCurrentState;

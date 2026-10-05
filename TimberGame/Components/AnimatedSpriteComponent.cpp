@@ -7,6 +7,8 @@ AnimatedSpriteComponent::AnimatedSpriteComponent(Actor* owner, int frameWidth, i
 	, frameHeight(frameHeight)
 	, frameCount(frameCount)
 	, drawOrder(drawOrder)
+	, mFrame(0)
+	, mCurrentState(nullptr)
 {
 	mOwner->getGame()->AddSprite(this);
 }
@@ -18,28 +20,26 @@ AnimatedSpriteComponent::~AnimatedSpriteComponent()
 void AnimatedSpriteComponent::Draw(SDL_Renderer* renderer) {
 	// This function would contain the logic to draw the sprite using the texture and frame information.
 	// It would typically involve setting up the source rectangle based on the current frame and rendering it to the screen.
-	int frame = 0;
-	int frameDuration;
 
 	if (mTextures.find(mOwner->getActorState()) != mTextures.end()) {
 		Sprite& currentSprite = mTextures[mOwner->getActorState()];
 		
-		if (mFrameDurations.find(mOwner->getActorState()) != mFrameDurations.end()) {
-			frameDuration = mFrameDurations[mOwner->getActorState()];
-		}
-		else {
-			frameDuration = 120;
-		}
+		//if (mFrameDurations.find(mOwner->getActorState()) != mFrameDurations.end()) {
+		//	frameDuration = mFrameDurations[mOwner->getActorState()];
+		//}
+		//else {
+		//	frameDuration = 120;
+		//}
 
 		frameWidth = currentSprite.getFrameWidth();
 		frameHeight = currentSprite.getFrameHeight();
 		frameCount = currentSprite.getFrameCount();
 
-		if (frameCount > 0) {
-			frame = (SDL_GetTicks()/frameDuration) % frameCount;
-		}
+		//if (frameCount > 0) {
+		//	frame = (SDL_GetTicks()/frameDuration) % frameCount;
+		//}
 
-		SDL_FRect src = { frame * frameWidth, 0.0f, frameWidth, frameHeight };
+		SDL_FRect src = { mFrame * frameWidth, 0.0f, frameWidth, frameHeight };
 
 		float destWidth = frameWidth * mScale;
 		float destHeight = frameHeight * mScale;

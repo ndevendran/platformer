@@ -1,5 +1,8 @@
 #include "Sheep.h"
 #include "Collidable.h"
+#include "WalkingState.h"
+#include "IdleState.h"
+#include "JumpState.h"
 #include <fstream>
 
 
@@ -18,6 +21,11 @@ Sheep::Sheep(float x, float y, Game* game)
 	sheepSprite->SetFrameDuration(JUMPING, 60);
 	sheepSprite->SetFrameDuration(ATTACKING, 120);
 
+	sheepSprite->RegisterState(new WalkingState(sheepSprite));
+	sheepSprite->RegisterState(new IdleState(sheepSprite));
+	sheepSprite->RegisterState(new JumpState(sheepSprite));
+	sheepSprite->ChangeState(IDLE);
+
 	sheepSprite->SetScale(3.0f);
 
 
@@ -34,6 +42,7 @@ Sheep::Sheep(float x, float y, Game* game)
 
 void Sheep::UpdateActor(float deltaTime)
 {
+	sheepSprite->Update(deltaTime);
 	for (auto collidable : getGame()->GetCollidables())
 	{
 		SquareComponent* otherSquare = collidable->GetSquare();

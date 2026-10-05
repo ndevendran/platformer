@@ -1,6 +1,10 @@
 #include "Alien.h"
 #include "Collidable.h"
 #include "AIPatrol.h"
+#include "WalkingState.h"
+#include "IdleState.h"
+#include "JumpState.h"
+#include "AttackState.h"
 
 Alien::Alien(float x, float y, Game* game)
 	:Collidable(x, y, game)
@@ -13,6 +17,13 @@ Alien::Alien(float x, float y, Game* game)
 
 
 	alienSprite->SetScale(3.0f);
+
+	alienSprite->RegisterState(new WalkingState(alienSprite));
+	alienSprite->RegisterState(new IdleState(alienSprite));
+	alienSprite->RegisterState(new JumpState(alienSprite));
+	alienSprite->RegisterState(new AttackState(alienSprite));
+
+	alienSprite->ChangeState(IDLE);
 
 	setActorState(IDLE);
 
