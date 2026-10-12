@@ -4,6 +4,7 @@
 #include "Game.h"
 #include "ActorStateType.h"
 #include "MyMath.h"
+#include "ActorDesignation.h"
 
 class Actor
 {
@@ -27,11 +28,14 @@ public:
 	ActorStateType getActorState() const { return state; }
 	void setActorState(ActorStateType newState) { state = newState; }
 
+	ActorDesignation getActorDesignation() const { return mDesignation;  }
+	void setActorDesignation(ActorDesignation designation) { mDesignation = designation;  }
+
 	virtual void UpdateActor(float deltaTime);
 	void UpdateComponents(float deltaTime);
 
 	bool getIsActive() const { return isActive; }
-	bool setActive(bool active) { isActive = active; }
+	void setActive(bool active) { isActive = active; }
 
 	void ProcessInput(const bool* keyState);
 	virtual void ActorInput(const bool* keyState);
@@ -48,6 +52,7 @@ protected:
 	bool walking = false;
 	bool facingRight = true;
 	std::vector<class Component*> mComponents;
-	
+	ActorDesignation mDesignation;
+
 	Game* mGame;
 };

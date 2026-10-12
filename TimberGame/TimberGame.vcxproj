@@ -24,9 +24,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ActorDesignation.cpp" />
     <ClCompile Include="ActorStateType.cpp" />
     <ClCompile Include="Actors\Actor.cpp" />
     <ClCompile Include="Actors\Sheep.cpp" />
+    <ClCompile Include="AIDeath.cpp" />
     <ClCompile Include="AIPatrol.cpp" />
     <ClCompile Include="Alien.cpp" />
     <ClCompile Include="AttackState.cpp" />
@@ -35,6 +37,7 @@
     <ClCompile Include="Components\MoveComponent.cpp" />
     <ClCompile Include="Components\AnimatedSpriteComponent.cpp" />
     <ClCompile Include="COMPONENTS\SpriteComponenet.cpp" />
+    <ClCompile Include="DeadState.cpp" />
     <ClCompile Include="Engine\Game.cpp" />
     <ClCompile Include="Engine\MyMath.cpp" />
     <ClCompile Include="FallingState.cpp" />
@@ -52,9 +55,11 @@
     <ClCompile Include="WalkingState.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ActorDesignation.h" />
     <ClInclude Include="Actors\Actor.h" />
     <ClInclude Include="Actors\ActorStateType.h" />
     <ClInclude Include="Actors\Sheep.h" />
+    <ClInclude Include="AIDeath.h" />
     <ClInclude Include="AIPatrol.h" />
     <ClInclude Include="Alien.h" />
     <ClInclude Include="AnimationState.h" />
@@ -63,6 +68,7 @@
     <ClInclude Include="Components\Component.h" />
     <ClInclude Include="Components\MoveComponent.h" />
     <ClInclude Include="Components\AnimatedSpriteComponent.h" />
+    <ClInclude Include="DeadState.h" />
     <ClInclude Include="Engine\AIState.h" />
     <ClInclude Include="Engine\Game.h" />
     <ClInclude Include="Engine\MyMath.h" />

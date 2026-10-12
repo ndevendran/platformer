@@ -9,7 +9,6 @@ AIPatrol::AIPatrol(AIComponent* owner)
 void AIPatrol::Update(float deltaTime)
 {
 	mPatrolDuration += deltaTime;
-	mOwner->GetOwner()->setActorState(WALKING);
 	if (mPatrolDuration >= PATROL_TIME) {
 		//Change direction
 		bool facingRight = mOwner->GetOwner()->isFacingRight();
@@ -34,6 +33,7 @@ void AIPatrol::Update(float deltaTime)
 
 void AIPatrol::OnEnter()
 {
+	mOwner->GetOwner()->setActorState(WALKING);
 }
 
 void AIPatrol::OnExit()

@@ -35,6 +35,8 @@ bool Game::Initialize()
 		0
 	);
 
+	SDL_RaiseWindow(window);
+
 	mRenderer = SDL_CreateRenderer(window, NULL);
 	if (!mRenderer)
 	{
@@ -135,7 +137,7 @@ void Game::GenerateOutput()
 		collidable->GetSquare()->DrawDebug(mRenderer);
 	}
 
-	mSheep->GetSquare()->DrawDebug(mRenderer);
+	//mSheep->GetSquare()->DrawDebug(mRenderer);
 	//mAlien->GetSquare()->DrawDebug(mRenderer);
 	
 

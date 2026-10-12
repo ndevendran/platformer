@@ -102,6 +102,15 @@
     <ClCompile Include="FallingState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ActorDesignation.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="DeadState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AIDeath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -174,6 +183,15 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="FallingState.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorDesignation.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="DeadState.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AIDeath.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

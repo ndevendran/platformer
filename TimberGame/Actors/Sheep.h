@@ -5,15 +5,15 @@
 #include "Game.h"
 #include "InputComponent.h"
 #include "SquareComponent.h"
+#include "Collidable.h"
 
-class Sheep : public Actor {
+class Sheep : public Collidable {
 public:
 	Sheep(float x, float y, Game* game);
 
 
 	void UpdateActor(float deltaTime) override;
 	void processInput(const bool* keyState);
-	SquareComponent* GetSquare() { return mSquare; };
 
 protected:
 	bool jumpStarted = false;
@@ -21,6 +21,6 @@ protected:
 	const float JUMP_SPEED = -500.0f; // Jump speed constant
 	const float FLOOR = 400.0f; // Floor position
 	AnimatedSpriteComponent* sheepSprite;
-	SquareComponent* mSquare;
+	//SquareComponent* mSquare;
 	InputComponent* sheepMove;
 };

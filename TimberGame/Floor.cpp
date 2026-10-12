@@ -23,6 +23,8 @@ Floor::Floor(float x, float y, Game* game)
 
 	GetSquare()->SetHeight(floorSprite->GetTexHeight());
 	GetSquare()->SetWidth(floorSprite->GetTexWidth());
+
+	mDesignation = NEUTRAL;
 }
 
 void Floor::UpdateActor(float deltaTime)
