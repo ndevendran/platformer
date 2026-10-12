@@ -6,7 +6,9 @@ enum ActorStateType {
 	JUMPING,
 	ATTACKING,
 	DEAD,
-	IDLE
+	IDLE,
+	RISING,
+	FALLING
 };
 
 std::string ActorStateToString(ActorStateType state);

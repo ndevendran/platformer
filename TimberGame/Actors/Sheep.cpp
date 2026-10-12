@@ -3,6 +3,9 @@
 #include "WalkingState.h"
 #include "IdleState.h"
 #include "JumpState.h"
+#include "AttackState.h"
+#include "FallingState.h"
+#include "RisingState.h"
 #include <fstream>
 
 
@@ -15,6 +18,8 @@ Sheep::Sheep(float x, float y, Game* game)
 	sheepSprite->SetTexture(IDLE, 42, 42, 4, game->GetTexture("assets/SheepIdle.png"));
 	sheepSprite->SetTexture(JUMPING, 42, 42, 8, game->GetTexture("assets/SheepJump.png"));
 	sheepSprite->SetTexture(ATTACKING, 42, 42, 6, game->GetTexture("assets/SheepAttack1.png"));
+	sheepSprite->SetTexture(RISING, 42, 42, 8, game->GetTexture("assets/SheepJump.png"));
+	sheepSprite->SetTexture(FALLING, 42, 42, 8, game->GetTexture("assets/SheepJump.png"));
 
 	sheepSprite->SetFrameDuration(WALKING, 120);
 	sheepSprite->SetFrameDuration(IDLE, 200);
@@ -24,6 +29,10 @@ Sheep::Sheep(float x, float y, Game* game)
 	sheepSprite->RegisterState(new WalkingState(sheepSprite));
 	sheepSprite->RegisterState(new IdleState(sheepSprite));
 	sheepSprite->RegisterState(new JumpState(sheepSprite));
+	sheepSprite->RegisterState(new AttackState(sheepSprite));
+	sheepSprite->RegisterState(new FallingState(sheepSprite));
+	sheepSprite->RegisterState(new RisingState(sheepSprite));
+
 	sheepSprite->ChangeState(IDLE);
 
 	sheepSprite->SetScale(3.0f);

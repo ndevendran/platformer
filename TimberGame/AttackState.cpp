@@ -11,7 +11,12 @@ void AttackState::Update(float deltaTime)
 	int frame = 0;
 	int frameDuration = 120;
 	if (frameCount > 0) {
-		frame = ((SDL_GetTicks() - frameStart) / frameDuration) % frameCount;
+		frame = (SDL_GetTicks() - frameStart)/frameDuration;
+	}
+
+	if (frame >= frameCount) {
+		mOwner->ChangeState(IDLE);
+		return;
 	}
 
 	mOwner->SetFrame(frame);

@@ -37,6 +37,7 @@
     <ClCompile Include="COMPONENTS\SpriteComponenet.cpp" />
     <ClCompile Include="Engine\Game.cpp" />
     <ClCompile Include="Engine\MyMath.cpp" />
+    <ClCompile Include="FallingState.cpp" />
     <ClCompile Include="Floor.cpp" />
     <ClCompile Include="IdleState.cpp" />
     <ClCompile Include="InputComponent.cpp" />
@@ -44,6 +45,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Collidable.cpp" />
     <ClCompile Include="Collidable.h" />
+    <ClCompile Include="RisingState.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="SquareComponent.cpp" />
     <ClCompile Include="SquareComponent.h" />
@@ -64,11 +66,13 @@
     <ClInclude Include="Engine\AIState.h" />
     <ClInclude Include="Engine\Game.h" />
     <ClInclude Include="Engine\MyMath.h" />
+    <ClInclude Include="FallingState.h" />
     <ClInclude Include="Floor.h" />
     <ClInclude Include="IdleState.h" />
     <ClInclude Include="InputComponent.h" />
     <ClInclude Include="JumpState.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="RisingState.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="WalkingState.h" />

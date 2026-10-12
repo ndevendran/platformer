@@ -14,6 +14,4 @@ public:
 		return JUMPING;
 	}
 
-protected:
-
 };

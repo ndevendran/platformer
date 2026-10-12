@@ -14,6 +14,10 @@ std::string ActorStateToString(ActorStateType state)
         return "DEAD";
     case IDLE:
         return "IDLE";
+    case RISING:
+        return "RISING";
+    case FALLING:
+        return "FALLING";
     default:
         return "UNKNOWN";
     }

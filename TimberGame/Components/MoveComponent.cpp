@@ -21,6 +21,10 @@ void MoveComponent::Update(float deltaTime)
 		mUpwardSpeed += GRAVITY * deltaTime; // Apply gravity to upward speed
 	}
 
+	if (mUpwardSpeed > 0 && mOwner->getActorState() == RISING) {
+		mOwner->setActorState(FALLING);
+	}
+
 	pos += Vector2(mForwardSpeed * deltaTime, mUpwardSpeed * deltaTime);
 
 	if (pos.x < 0.0f) {

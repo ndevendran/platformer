@@ -102,6 +102,7 @@ void AnimatedSpriteComponent::ChangeState(const ActorStateType name)
 	if (iter != mStateMap.end()) {
 		mCurrentState = iter->second;
 		mCurrentState->OnEnter();
+		mOwner->setActorState(mCurrentState->GetName());
 	}
 	else {
 		SDL_Log("Could not find current state %s in state map", ActorStateToString(name));
