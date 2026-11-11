@@ -5,6 +5,7 @@ enum ActorStateType {
 	WALKING,
 	JUMPING,
 	ATTACKING,
+	DYING,
 	DEAD,
 	IDLE,
 	RISING,

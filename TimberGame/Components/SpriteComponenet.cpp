@@ -15,6 +15,7 @@ SpriteComponent::SpriteComponent(Actor* owner, int drawOrder)
 
 SpriteComponent::~SpriteComponent()
 {
+	mOwner->getGame()->RemoveSprite(this);
 }
 
 void SpriteComponent::SetTexture(SDL_Texture* texture) {

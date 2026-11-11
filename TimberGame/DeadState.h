@@ -11,7 +11,7 @@ public:
 	void OnExit() override;
 
 	ActorStateType GetName() const override {
-		return DEAD;
+		return DYING;
 	}
 
 };

@@ -18,4 +18,5 @@ Collidable::Collidable(float x, float y, Game* game)
 
 Collidable::~Collidable()
 {
+	mGame->RemoveCollidable(this);
 }

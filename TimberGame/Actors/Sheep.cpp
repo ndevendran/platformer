@@ -20,7 +20,7 @@ Sheep::Sheep(float x, float y, Game* game)
 	sheepSprite->SetTexture(ATTACKING, 42, 42, 6, game->GetTexture("assets/SheepAttack1.png"));
 	sheepSprite->SetTexture(RISING, 42, 42, 8, game->GetTexture("assets/SheepJump.png"));
 	sheepSprite->SetTexture(FALLING, 42, 42, 8, game->GetTexture("assets/SheepJump.png"));
-	sheepSprite->SetTexture(DEAD, 42, 42, 8, game->GetTexture("assets/SheepDeath.png"));
+	sheepSprite->SetTexture(DYING, 42, 42, 8, game->GetTexture("assets/SheepDeath.png"));
 
 	sheepSprite->SetFrameDuration(WALKING, 120);
 	sheepSprite->SetFrameDuration(IDLE, 200);
@@ -106,7 +106,7 @@ void Sheep::UpdateActor(float deltaTime)
 			Vector2 pos = GetPosition();
 
 			if (otherSquare->GetOwner()->getActorDesignation() == ENEMY) {
-				if (otherSquare->GetOwner()->getActorState() == DEAD) {
+				if (otherSquare->GetOwner()->getActorState() == DEAD || otherSquare->GetOwner()->getActorState() == DYING) {
 					continue;
 				}
 
@@ -115,7 +115,7 @@ void Sheep::UpdateActor(float deltaTime)
 				{
 					//Hit from the side
 					if (state != ATTACKING) {
-						setActorState(DEAD);
+						setActorState(DYING);
 					}
 				} else {
 					//Vertical Collision
@@ -123,11 +123,11 @@ void Sheep::UpdateActor(float deltaTime)
 						//Jumped on enemy
 						sheepMove->SetUpwardSpeed(-400.0f);
 						setActorState(RISING);
-						otherSquare->GetOwner()->setActorState(DEAD);
+						otherSquare->GetOwner()->setActorState(DYING);
 					}
 					else {
 						// Enemy jumped on player
-						setActorState(DEAD);
+						setActorState(DYING);
 					}
 				}
 

@@ -10,7 +10,7 @@ AnimatedSpriteComponent::AnimatedSpriteComponent(Actor* owner, int frameWidth, i
 	, mFrame(0)
 	, mCurrentState(nullptr)
 {
-	mOwner->getGame()->AddSprite(this);
+	
 }
 
 AnimatedSpriteComponent::~AnimatedSpriteComponent()

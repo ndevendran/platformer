@@ -16,7 +16,7 @@ Alien::Alien(float x, float y, Game* game)
 	alienSprite->SetFrameDuration(WALKING, 120);
 
 	alienSprite->SetTexture(IDLE, 42, 42, 4, game->GetTexture("assets/AlienIdle.png"));
-	alienSprite->SetTexture(DEAD, 42, 42, 8, game->GetTexture("assets/AlienDeath.png"));
+	alienSprite->SetTexture(DYING, 42, 42, 8, game->GetTexture("assets/AlienDeath.png"));
 
 
 	alienSprite->SetScale(3.0f);
@@ -110,12 +110,12 @@ void Alien::UpdateActor(float deltaTime)
 					if (diff.y < 0) {
 						//Jumped on player
 						alienMove->SetUpwardSpeed(-400.0f);
-						otherSquare->GetOwner()->setActorState(DEAD);
+						otherSquare->GetOwner()->setActorState(DYING);
 					}
 					else {
 						// Player jumped on enemy
 						alienAI->ChangeState("Death");
-						setActorState(DEAD);
+						setActorState(DYING);
 					}
 				}
 

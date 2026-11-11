@@ -10,7 +10,7 @@ class Actor
 {
 public:
 	Actor(float x, float y, Game* game);
-	~Actor();
+	virtual ~Actor();
 
 	const Vector2& GetPosition() const { return mPosition; }
 	void SetPosition(const Vector2& pos) { mPosition = pos; }

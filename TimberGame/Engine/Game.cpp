@@ -111,6 +111,23 @@ void Game::UpdateGame()
 	}
 	mUpdatingActors = false;
 
+	for (auto pending : mPendingActors) {
+		mActors.emplace_back(pending);
+	}
+	mPendingActors.clear();
+
+	std::vector<Actor*> deadActors;
+	for (auto actor : mActors) {
+		if (actor->getActorState() == DEAD) {
+			deadActors.emplace_back(actor);
+		}
+	}
+
+	//Delete dead actors
+	for (auto actor : deadActors) {
+		delete actor;
+	}
+
 
 	Uint32 frameTime = SDL_GetTicks() - frameStart;
 
@@ -270,6 +287,37 @@ void Game::AddSprite(SpriteComponent* sprite)
 void Game::RemoveSprite(SpriteComponent* sprite)
 {
 	// (We can't swap because it ruins ordering)
+	int count = std::count(
+		mSprites.begin(),
+		mSprites.end(),
+		sprite
+	);
+
 	auto iter = std::find(mSprites.begin(), mSprites.end(), sprite);
-	mSprites.erase(iter);
+
+	if (iter != mSprites.end())
+	{
+		mSprites.erase(iter);
+	}
+	
+}
+
+void Game::RemoveCollidable(Collidable* collidable)
+{
+	int count = std::count(
+		mCollidables.begin(),
+		mCollidables.end(),
+		collidable
+	);
+
+	auto iter = std::find(
+		mCollidables.begin(),
+		mCollidables.end(),
+		collidable
+	);
+
+	if (iter != mCollidables.end())
+	{
+		mCollidables.erase(iter);
+	}
 }

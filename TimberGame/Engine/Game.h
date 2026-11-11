@@ -25,6 +25,7 @@ public:
 
 	void AddSprite(class SpriteComponent* sprite);
 	void RemoveSprite(class SpriteComponent* sprite);
+	void RemoveCollidable(class Collidable* collidable);
 	Uint32 getSpeed() const { return speed; }
 
 	SDL_Texture* GetTexture(const std::string& fileName);

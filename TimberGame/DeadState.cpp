@@ -15,7 +15,7 @@ void DeadState::Update(float deltaTime)
 	}
 
 	if (frame >= frameCount) {
-		//mOwner->GetOwner()->setActive(false);
+		mOwner->GetOwner()->setActorState(DEAD);
 		return;
 	}
 
