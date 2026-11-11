@@ -1,6 +1,6 @@
 #pragma once
 #include "Collidable.h"
-#include "AnimatedSpriteComponent.h"
+#include "../Components/Sprites/AnimatedSpriteComponent.h"
 #include "MoveComponent.h"
 #include "Game.h"
 #include "AIComponent.h"

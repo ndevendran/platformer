@@ -1,12 +1,12 @@
 #include "Sheep.h"
 #include "Collidable.h"
-#include "WalkingState.h"
-#include "IdleState.h"
-#include "JumpState.h"
-#include "AttackState.h"
-#include "FallingState.h"
-#include "RisingState.h"
-#include "DeadState.h"
+#include "../Engine/Animation/WalkingState.h"
+#include "../Engine/Animation/IdleState.h"
+#include "../Engine/Animation/JumpState.h"
+#include "../Engine/Animation/AttackState.h"
+#include "../Engine/Animation/FallingState.h"
+#include "../Engine/Animation/RisingState.h"
+#include "../Engine/Animation/DeadState.h"
 #include <fstream>
 
 

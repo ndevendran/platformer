@@ -1,6 +1,6 @@
 #pragma once
 #include "Actor.h"
-#include "SpriteComponent.h"
+#include "../Components/Sprites/SpriteComponent.h"
 #include "Collidable.h"
 
 class Floor : public Collidable {

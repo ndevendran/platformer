@@ -1,6 +1,6 @@
 #pragma once
 #include "Actor.h"
-#include "AnimatedSpriteComponent.h"
+#include "../Components/Sprites/AnimatedSpriteComponent.h"
 #include "MoveComponent.h"
 #include "Game.h"
 #include "InputComponent.h"

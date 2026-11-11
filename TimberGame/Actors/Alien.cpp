@@ -1,12 +1,12 @@
 #include "Alien.h"
 #include "Collidable.h"
-#include "AIPatrol.h"
-#include "AIDeath.h"
-#include "WalkingState.h"
-#include "IdleState.h"
-#include "JumpState.h"
-#include "AttackState.h"
-#include "DeadState.h"
+#include "../Engine/AI/AIPatrol.h"
+#include "../Engine/AI/AIDeath.h"
+#include "../Engine/Animation/WalkingState.h"
+#include "../Engine/Animation/IdleState.h"
+#include "../Engine/Animation/JumpState.h"
+#include "../Engine/Animation/AttackState.h"
+#include "../Engine/Animation/DeadState.h"
 
 Alien::Alien(float x, float y, Game* game)
 	:Collidable(x, y, game)

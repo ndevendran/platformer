@@ -5,7 +5,7 @@
 #include "ActorStateType.h"
 #include "Sprite.h"
 #include "SpriteComponent.h"
-#include "AnimationState.h"
+#include "../Engine/Animation/AnimationState.h"
 
 class AnimatedSpriteComponent : public SpriteComponent
 {

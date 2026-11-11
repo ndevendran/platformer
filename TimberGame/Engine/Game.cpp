@@ -10,7 +10,8 @@
 #include <SDL3_image/SDL_image.h>
 #include <algorithm>
 #include "Actor.h"
-#include "SpriteComponent.h"
+#include "../Components/Sprites/SpriteComponent.h"
+#include "../Components/Sprites/AnimatedSpriteComponent.h"
 #include "Sheep.h"
 #include "Collidable.h"
 #include "Floor.h"

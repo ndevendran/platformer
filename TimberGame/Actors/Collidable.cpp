@@ -1,6 +1,7 @@
 #include "Collidable.h"
-#include "AnimatedSpriteComponent.h"
+#include "../Components/Sprites/AnimatedSpriteComponent.h"
 #include "SquareComponent.h"
+#include "../Engine/Animation/AnimationState.h"
 
 Collidable::Collidable(float x, float y, Game* game)
 	:Actor(x, y, game)

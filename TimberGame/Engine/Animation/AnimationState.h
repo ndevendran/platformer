@@ -1,5 +1,5 @@
 #pragma once
-#include "AnimatedSpriteComponent.h"
+#include "../Components/Sprites/AnimatedSpriteComponent.h"
 
 class AnimationState
 {

@@ -2,7 +2,7 @@
 #include <Component.h>
 #include <string>
 #include <unordered_map>
-#include "AIState.h"
+#include "../Engine/AI/AIState.h"
 #include <SDL3/SDL.h>
 
 class AIComponent:public Component

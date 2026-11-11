@@ -22,18 +22,21 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{7b7c0720-6168-49c4-ba59-aa18f9e8d2f6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Animation">
+      <UniqueIdentifier>{4af450f2-980c-4348-8926-fef44a1931c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\AI">
+      <UniqueIdentifier>{0f9fcb0e-ca08-41da-8b51-0934ab60822f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Sprites">
+      <UniqueIdentifier>{5d5659a6-0a5f-40d2-a9c9-911e3174da5a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sprite.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Components\MoveComponent.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Components\AnimatedSpriteComponent.cpp">
       <Filter>Components</Filter>
     </ClCompile>
     <ClCompile Include="Actors\Actor.cpp">
@@ -51,78 +54,72 @@
     <ClCompile Include="Engine\MyMath.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="InputComponent.cpp">
+    <ClCompile Include="Components\SquareComponent.cpp">
       <Filter>Components</Filter>
     </ClCompile>
-    <ClCompile Include="SquareComponent.h">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Collidable.h">
+    <ClCompile Include="Actors\ActorDesignation.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
-    <ClCompile Include="Collidable.cpp">
+    <ClCompile Include="Actors\ActorStateType.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
-    <ClCompile Include="SquareComponent.cpp">
-      <Filter>Components</Filter>
+    <ClCompile Include="Engine\Animation\DeadState.cpp">
+      <Filter>Engine\Animation</Filter>
     </ClCompile>
-    <ClCompile Include="COMPONENTS\SpriteComponenet.cpp">
-      <Filter>Components</Filter>
+    <ClCompile Include="Engine\Animation\FallingState.cpp">
+      <Filter>Engine\Animation</Filter>
     </ClCompile>
-    <ClCompile Include="Floor.cpp">
-      <Filter>Actors</Filter>
+    <ClCompile Include="Engine\Animation\IdleState.cpp">
+      <Filter>Engine\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Animation\JumpState.cpp">
+      <Filter>Engine\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Animation\RisingState.cpp">
+      <Filter>Engine\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Animation\WalkingState.cpp">
+      <Filter>Engine\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Animation\AttackState.cpp">
+      <Filter>Engine\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\AI\AIDeath.cpp">
+      <Filter>Engine\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\AI\AIPatrol.cpp">
+      <Filter>Engine\AI</Filter>
     </ClCompile>
     <ClCompile Include="Components\AIComponent.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Components</Filter>
     </ClCompile>
-    <ClCompile Include="AIPatrol.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Alien.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IdleState.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="WalkingState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="JumpState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AttackState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ActorStateType.cpp">
+    <ClCompile Include="Actors\Alien.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
-    <ClCompile Include="RisingState.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Components\InputComponent.cpp">
+      <Filter>Components</Filter>
     </ClCompile>
-    <ClCompile Include="FallingState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ActorDesignation.cpp">
+    <ClCompile Include="Actors\Floor.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
-    <ClCompile Include="DeadState.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Components\Sprites\AnimatedSpriteComponent.cpp">
+      <Filter>Components\Sprites</Filter>
     </ClCompile>
-    <ClCompile Include="AIDeath.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Components\Sprites\Sprite.cpp">
+      <Filter>Components\Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Sprites\SpriteComponenet.cpp">
+      <Filter>Components\Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="Actors\Collidable.cpp">
+      <Filter>Actors</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Components\MoveComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Components\AnimatedSpriteComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="Actors\Actor.h">
@@ -143,56 +140,68 @@
     <ClInclude Include="Engine\MyMath.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="InputComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Floor.h">
-      <Filter>Actors</Filter>
-    </ClInclude>
     <ClInclude Include="Components\AIComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\AIState.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="Components\SquareComponent.h">
+      <Filter>Components</Filter>
     </ClInclude>
-    <ClInclude Include="AIPatrol.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Alien.h">
+    <ClInclude Include="Actors\ActorDesignation.h">
       <Filter>Actors</Filter>
     </ClInclude>
-    <ClInclude Include="AnimationState.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="Engine\Animation\AnimationState.h">
+      <Filter>Engine\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="IdleState.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="Engine\Animation\DeadState.h">
+      <Filter>Engine\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="WalkingState.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="Engine\Animation\FallingState.h">
+      <Filter>Engine\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="JumpState.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="Engine\Animation\IdleState.h">
+      <Filter>Engine\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="AttackState.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="Engine\Animation\JumpState.h">
+      <Filter>Engine\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="RisingState.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="Engine\Animation\RisingState.h">
+      <Filter>Engine\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="FallingState.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="Engine\Animation\WalkingState.h">
+      <Filter>Engine\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="ActorDesignation.h">
+    <ClInclude Include="Engine\Animation\AttackState.h">
+      <Filter>Engine\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\AI\AIDeath.h">
+      <Filter>Engine\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\AI\AIPatrol.h">
+      <Filter>Engine\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\AI\AIState.h">
+      <Filter>Engine\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Actors\Alien.h">
       <Filter>Actors</Filter>
     </ClInclude>
-    <ClInclude Include="DeadState.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="Components\InputComponent.h">
+      <Filter>Components</Filter>
     </ClInclude>
-    <ClInclude Include="AIDeath.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="Actors\Floor.h">
+      <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Sprites\AnimatedSpriteComponent.h">
+      <Filter>Components\Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Sprites\Sprite.h">
+      <Filter>Components\Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Sprites\SpriteComponent.h">
+      <Filter>Components\Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="Actors\Collidable.h">
+      <Filter>Actors</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
