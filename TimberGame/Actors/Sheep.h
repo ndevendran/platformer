@@ -1,9 +1,9 @@
 #pragma once
 #include "Actor.h"
 #include "../Components/Sprites/AnimatedSpriteComponent.h"
-#include "MoveComponent.h"
+#include "../Components/Movement/MoveComponent.h"
 #include "Game.h"
-#include "InputComponent.h"
+#include "../Components/Movement/InputComponent.h"
 #include "SquareComponent.h"
 #include "Collidable.h"
 

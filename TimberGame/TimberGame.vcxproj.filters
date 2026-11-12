@@ -31,13 +31,13 @@
     <Filter Include="Components\Sprites">
       <UniqueIdentifier>{5d5659a6-0a5f-40d2-a9c9-911e3174da5a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components\Movement">
+      <UniqueIdentifier>{8c16c7dc-972e-496e-975d-cbac94349d27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Components\MoveComponent.cpp">
-      <Filter>Components</Filter>
     </ClCompile>
     <ClCompile Include="Actors\Actor.cpp">
       <Filter>Actors</Filter>
@@ -96,9 +96,6 @@
     <ClCompile Include="Actors\Alien.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
-    <ClCompile Include="Components\InputComponent.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
     <ClCompile Include="Actors\Floor.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
@@ -114,13 +111,16 @@
     <ClCompile Include="Actors\Collidable.cpp">
       <Filter>Actors</Filter>
     </ClCompile>
+    <ClCompile Include="Components\Movement\InputComponent.cpp">
+      <Filter>Components\Movement</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Movement\MoveComponent.cpp">
+      <Filter>Components\Movement</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Components\MoveComponent.h">
-      <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="Actors\Actor.h">
       <Filter>Actors</Filter>
@@ -185,9 +185,6 @@
     <ClInclude Include="Actors\Alien.h">
       <Filter>Actors</Filter>
     </ClInclude>
-    <ClInclude Include="Components\InputComponent.h">
-      <Filter>Components</Filter>
-    </ClInclude>
     <ClInclude Include="Actors\Floor.h">
       <Filter>Actors</Filter>
     </ClInclude>
@@ -202,6 +199,12 @@
     </ClInclude>
     <ClInclude Include="Actors\Collidable.h">
       <Filter>Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Movement\InputComponent.h">
+      <Filter>Components\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Movement\MoveComponent.h">
+      <Filter>Components\Movement</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

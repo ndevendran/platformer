@@ -26,6 +26,7 @@ public:
 	void AddSprite(class SpriteComponent* sprite);
 	void RemoveSprite(class SpriteComponent* sprite);
 	void RemoveCollidable(class Collidable* collidable);
+	Actor* GetPlayer() { return mPlayer;  }
 	Uint32 getSpeed() const { return speed; }
 
 	SDL_Texture* GetTexture(const std::string& fileName);
@@ -62,6 +63,7 @@ private:
 	// Game-specific
 	class Sheep* mSheep; // Player's sheep
 	class Alien* mAlien; // Enemy alien
+	class Actor* mPlayer; // Player character
 
 	Uint32 speed = 100; // milliseconds per frame
 };

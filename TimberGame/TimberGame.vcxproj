@@ -33,8 +33,8 @@
     <ClCompile Include="Actors\Sheep.cpp" />
     <ClCompile Include="Components\AIComponent.cpp" />
     <ClCompile Include="Components\Component.cpp" />
-    <ClCompile Include="Components\InputComponent.cpp" />
-    <ClCompile Include="Components\MoveComponent.cpp" />
+    <ClCompile Include="Components\Movement\InputComponent.cpp" />
+    <ClCompile Include="Components\Movement\MoveComponent.cpp" />
     <ClCompile Include="Components\Sprites\AnimatedSpriteComponent.cpp" />
     <ClCompile Include="Components\Sprites\Sprite.cpp" />
     <ClCompile Include="Components\Sprites\SpriteComponenet.cpp" />
@@ -62,8 +62,8 @@
     <ClInclude Include="Actors\Sheep.h" />
     <ClInclude Include="Components\AIComponent.h" />
     <ClInclude Include="Components\Component.h" />
-    <ClInclude Include="Components\InputComponent.h" />
-    <ClInclude Include="Components\MoveComponent.h" />
+    <ClInclude Include="Components\Movement\InputComponent.h" />
+    <ClInclude Include="Components\Movement\MoveComponent.h" />
     <ClInclude Include="Components\Sprites\AnimatedSpriteComponent.h" />
     <ClInclude Include="Components\Sprites\Sprite.h" />
     <ClInclude Include="Components\Sprites\SpriteComponent.h" />
