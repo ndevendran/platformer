@@ -1,4 +1,5 @@
 #include "SpriteComponent.h"
+#include "../Actors/Camera.h"
 
 
 
@@ -31,8 +32,16 @@ void SpriteComponent::SetTexture(SDL_Texture* texture) {
 
 void SpriteComponent::Draw(SDL_Renderer* renderer) {
 	SDL_FRect r;
-	r.x = mOwner->GetPosition().x - mTexWidth / 2;
-	r.y = mOwner->GetPosition().y - mTexHeight / 2;
+	Camera* camera = mOwner->getGame()->GetCamera();
+	const Vector2& cameraPosition = camera->GetPosition();
+	int windowWidth, windowHeight;
+
+	float destWidth = mTexWidth;
+	float destHeight = mTexHeight;
+
+	SDL_GetCurrentRenderOutputSize(renderer, &windowWidth, &windowHeight);
+	r.x = (mOwner->GetPosition().x - cameraPosition.x) + (windowWidth/2.0f) - (destWidth / 2);
+	r.y = (mOwner->GetPosition().y - cameraPosition.y) + (windowHeight/2.0f) - (destHeight / 2);
 	r.w = mTexWidth;
 	r.h = mTexHeight;
 

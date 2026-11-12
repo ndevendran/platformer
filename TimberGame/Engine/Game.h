@@ -12,6 +12,9 @@
 #include <string>
 #include <vector>
 
+class Camera;
+class Sheep;
+
 class Game
 {
 public:
@@ -26,7 +29,8 @@ public:
 	void AddSprite(class SpriteComponent* sprite);
 	void RemoveSprite(class SpriteComponent* sprite);
 	void RemoveCollidable(class Collidable* collidable);
-	Actor* GetPlayer() { return mPlayer;  }
+	Sheep* GetPlayer() { return mSheep; }
+	Camera* GetCamera() { return mCamera;  }
 	Uint32 getSpeed() const { return speed; }
 
 	SDL_Texture* GetTexture(const std::string& fileName);
@@ -64,6 +68,7 @@ private:
 	class Sheep* mSheep; // Player's sheep
 	class Alien* mAlien; // Enemy alien
 	class Actor* mPlayer; // Player character
+	class Camera* mCamera; // Camera that moves across level with player
 
 	Uint32 speed = 100; // milliseconds per frame
 };

@@ -45,8 +45,8 @@ Sheep::Sheep(float x, float y, Game* game)
 	//mSquare = new SquareComponent(this);
 	//mSquare->SetHeight(sheepSprite->GetRenderedHeight());
 	//mSquare->SetWidth(sheepSprite->GetRenderedWidth());
-	GetSquare()->SetHeight(80.0f);
-	GetSquare()->SetWidth(90.0f);
+	GetSquare()->SetHeight(26.0f * sheepSprite->GetScale());
+	GetSquare()->SetWidth(30.0f * sheepSprite->GetScale());
 	GetSquare()->SetOffset(Vector2(0.0f, 24.0f));
 
 	mDesignation = PLAYER;

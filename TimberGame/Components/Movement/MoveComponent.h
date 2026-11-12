@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Component.h"
-#include "Actor.h"
+#include "../Components/Component.h"
+#include "../Actors/Actor.h"
 
 class MoveComponent : public Component
 {

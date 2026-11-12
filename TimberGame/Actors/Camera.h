@@ -1,6 +1,7 @@
 #pragma once
 #include "Game.h"
 #include "Actor.h"
+#include "Sheep.h"
 
 class Camera : public Actor {
 public:
@@ -8,4 +9,4 @@ public:
 	void UpdateActor(float deltaTime) override;
 
 
-}
+};

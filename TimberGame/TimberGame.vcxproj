@@ -28,6 +28,7 @@
     <ClCompile Include="Actors\ActorDesignation.cpp" />
     <ClCompile Include="Actors\ActorStateType.cpp" />
     <ClCompile Include="Actors\Alien.cpp" />
+    <ClCompile Include="Actors\Camera.cpp" />
     <ClCompile Include="Actors\Collidable.cpp" />
     <ClCompile Include="Actors\Floor.cpp" />
     <ClCompile Include="Actors\Sheep.cpp" />
@@ -57,6 +58,7 @@
     <ClInclude Include="Actors\ActorDesignation.h" />
     <ClInclude Include="Actors\ActorStateType.h" />
     <ClInclude Include="Actors\Alien.h" />
+    <ClInclude Include="Actors\Camera.h" />
     <ClInclude Include="Actors\Collidable.h" />
     <ClInclude Include="Actors\Floor.h" />
     <ClInclude Include="Actors\Sheep.h" />

@@ -117,6 +117,9 @@
     <ClCompile Include="Components\Movement\MoveComponent.cpp">
       <Filter>Components\Movement</Filter>
     </ClCompile>
+    <ClCompile Include="Actors\Camera.cpp">
+      <Filter>Actors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -205,6 +208,9 @@
     </ClInclude>
     <ClInclude Include="Components\Movement\MoveComponent.h">
       <Filter>Components\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Actors\Camera.h">
+      <Filter>Actors</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

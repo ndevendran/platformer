@@ -1,4 +1,5 @@
 #include "AnimatedSpriteComponent.h"
+#include "../Actors/Camera.h"
 #include "Actor.h"
 
 AnimatedSpriteComponent::AnimatedSpriteComponent(Actor* owner, int frameWidth, int frameHeight, int frameCount, int drawOrder)
@@ -44,12 +45,21 @@ void AnimatedSpriteComponent::Draw(SDL_Renderer* renderer) {
 		float destWidth = frameWidth * mScale;
 		float destHeight = frameHeight * mScale;
 
+		Camera* camera = mOwner->getGame()->GetCamera();
+		const Vector2& cameraPosition = camera->GetPosition();
+
+		int windowWidth, windowHeight;
+		
+		SDL_GetCurrentRenderOutputSize(renderer, &windowWidth, &windowHeight);
+
+
 		SDL_FRect dest = { 
-			mOwner->GetPosition().x - destWidth/2.0f, 
-			mOwner->GetPosition().y - destHeight/2.0f, 
+			(mOwner->GetPosition().x - cameraPosition.x) + (windowWidth/2.0f) - (destWidth / 2.0f),
+			(mOwner->GetPosition().y - cameraPosition.y) + (windowHeight/2.0f) - (destHeight / 2.0f),
 			destWidth, 
 			destHeight
 		};
+
 
 		SDL_FlipMode flip = mOwner->isFacingRight() ? SDL_FLIP_NONE : SDL_FLIP_HORIZONTAL;
 
